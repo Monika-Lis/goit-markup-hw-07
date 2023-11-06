@@ -63,6 +63,14 @@ ol {
   margin: 0;
 }
 
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .hero-image {
+    background-image: url(../images/herobg2x.jpg);
+  }
+}
+
 @media (max-width: 767px) {
   .container {
     width: 428px;
@@ -212,7 +220,7 @@ ol {
     left: 0;
     width: 100vw;
     height: 100vh;
-    padding: 0px 40px;
+    padding: 80px 40px 40px;
     background-color: var(--white-background);
     z-index: 999;
     transform: translateX(100%);
@@ -221,7 +229,6 @@ ol {
     flex-direction: column;
     justify-content: space-between;
   }
-
   .menu-container.is-open {
     transform: translateX(0);
   }
@@ -1100,6 +1107,7 @@ ol {
   .header {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     height: 72px;
   }
 
@@ -1118,6 +1126,7 @@ ol {
     text-transform: uppercase;
     color: var(--brand-color);
     display: inline-block;
+    margin-right: 120px;
   }
 
   .logo-studio {
