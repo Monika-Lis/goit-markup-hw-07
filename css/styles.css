@@ -321,7 +321,7 @@ ol {
   }
 
   .studio-socials {
-    padding: 0px 120px;
+    padding: 0px auto;
   }
 
   .studio-socials-list {
@@ -373,7 +373,7 @@ ol {
 
   .studio-newsletter-form {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     gap: 16px;
@@ -381,9 +381,9 @@ ol {
 
   .studio-newsletter-input {
     display: flex;
-    width: 264px;
     height: 40px;
-    gap: 24px;
+    width: 264px;
+
     padding: 8px 16px;
     font-size: 12px;
     line-height: 1.5;
@@ -1234,7 +1234,7 @@ ol {
   }
 
   .studio-socials {
-    padding: 0px 24px;
+    padding: 0px auto;
   }
 
   .studio-socials-list {
@@ -1883,7 +1883,7 @@ ol {
   /* General*/
 
   .container {
-    width: 1158px;
+    max-width: 1158px;
     margin: auto;
     padding: 0px 15px;
   }
@@ -1892,7 +1892,7 @@ ol {
 
   .header {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
   }
 
