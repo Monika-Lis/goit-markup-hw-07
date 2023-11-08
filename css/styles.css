@@ -26,6 +26,16 @@ body {
   padding: 0;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
 img {
   display: block;
   max-width: 100%;
@@ -63,18 +73,20 @@ ol {
   margin: 0;
 }
 
-@media (min-device-pixel-ratio: 2),
-  (min-resolution: 192dpi),
-  (min-resolution: 2dppx) {
-  .hero-image {
-    background-image: url(../images/herobg2x.jpg);
-  }
+.list {
+  list-style: none;
 }
 
-@media (max-width: 767px) {
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0px 16px;
+}
+
+@media (min-width: 320px) {
   .container {
-    width: 428px;
-    margin: auto;
+    max-width: 428px;
+    margin: 0 auto;
     padding: 0px 16px;
   }
 
@@ -83,7 +95,8 @@ ol {
   .header {
     display: flex;
     align-items: center;
-    justify-content: center;
+    padding: 24px 16px;
+    position: relative;
   }
 
   .header-border {
@@ -101,62 +114,21 @@ ol {
     text-transform: uppercase;
     color: var(--brand-color);
     display: inline-block;
-    margin-right: 249px;
+    margin-right: 76px;
   }
 
   .logo-studio {
     color: var(--dark-color);
   }
 
-  .list {
-    list-style: none;
-  }
-
   .nav {
     display: flex;
     align-items: center;
-  }
-
-  .nav-list-link {
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-    color: var(--dark-color);
-    padding: 24px 0px;
-  }
-
-  .active {
-    position: relative;
-    color: var(--pressed-color);
-  }
-
-  .active::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -1px;
-    height: 4px;
-    width: 100%;
-    background-color: var(--pressed-color);
-    border-radius: 2px;
+    margin-right: auto;
   }
 
   .contact {
     font-style: normal;
-  }
-
-  .nav-contact-item {
-    display: inline-block;
-    padding: 24px 20px;
-  }
-
-  .nav-contact-link {
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-    color: var(--text-color);
-    text-decoration: none;
   }
 
   .nav-list,
@@ -169,7 +141,7 @@ ol {
     min-width: 40px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 
     margin: 0;
     padding: 0;
@@ -242,6 +214,7 @@ ol {
     margin-bottom: 40px;
     color: var(--dark-color);
     text-decoration: none;
+    font-style: normal;
     transition: color var(--tr-dur) var(--tr-fn);
   }
 
@@ -255,6 +228,7 @@ ol {
     font-size: 20px;
     line-height: 1.2;
     letter-spacing: 0.02em;
+    font-style: normal;
     color: var(--text-color);
   }
 
@@ -470,6 +444,7 @@ ol {
   }
 
   .hero-image {
+    width: 100%;
     display: flex;
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
@@ -479,10 +454,20 @@ ol {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    margin: 0 auto;
-    margin-bottom: 96px;
+    margin: 0 auto 96px;
   }
 
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .hero-image {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/herobg2x.jpg);
+    }
+  }
   .hero-title {
     font-weight: 700;
     font-size: 36px;
@@ -538,20 +523,11 @@ ol {
   }
 
   .objective-item-icon {
-    width: 264px;
-    height: 112px;
-    background-color: var(--light-color);
-    border-radius: 4px;
-    justify-content: center;
-    align-items: center;
-    box-sizing: border-box;
-    padding: 24px 100px;
-    margin-bottom: 8px;
     display: none;
   }
 
   .objective-item {
-    width: 396px;
+    width: calc(100% -32px);
   }
 
   .objective {
@@ -693,7 +669,7 @@ ol {
   }
 
   .customer-item {
-    width: 190px;
+    width: calc((100% - 32px) / 2);
     height: 88px;
   }
 
@@ -1097,7 +1073,7 @@ ol {
   /* General*/
 
   .container {
-    width: 768px;
+    max-width: 768px;
     margin: auto;
     padding: 0px 16px;
   }
@@ -1391,6 +1367,18 @@ ol {
     background-repeat: no-repeat;
     margin: 0 auto;
     margin-bottom: 96px;
+  }
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .hero-image {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/herobg2x.jpg);
+    }
   }
 
   .hero-title {
@@ -2188,6 +2176,18 @@ ol {
     background-repeat: no-repeat;
     margin: 0 auto;
     margin-bottom: 120px;
+  }
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .hero-image {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/herobg2x.jpg);
+    }
   }
 
   .hero-title {
